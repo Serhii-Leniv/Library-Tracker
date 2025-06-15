@@ -1,7 +1,7 @@
-
+Library Tracker
 Library Tracker — це мікросервісна система для управління бібліотекою: книги, автори, читачі та історія видачі. Створено на Java з використанням Spring Boot, REST API та Docker.
 
--Технології
+Технології
 Java 17
 
 Spring Boot
@@ -16,16 +16,16 @@ Maven
 
 Lombok
 
--Мікросервіси
-book-service: CRUD для книг
+Мікросервіси
+book-service — CRUD для книг
 
-author-service: CRUD для авторів
+author-service — CRUD для авторів
 
-reader-service: CRUD для читачів
+reader-service — CRUD для читачів
 
-history-service: облік видачі й повернення книг
+history-service — облік видачі й повернення книг
 
--Функціонал
+Функціонал
 Управління книгами, авторами, читачами
 
 Історія видачі книг
@@ -34,4 +34,6 @@ history-service: облік видачі й повернення книг
 
 Пошук і фільтрація по назві, автору, читачу
 
-API буде доступне на http://localhost:8080
+API
+Після запуску API буде доступне за адресою:
+http://localhost:8080
