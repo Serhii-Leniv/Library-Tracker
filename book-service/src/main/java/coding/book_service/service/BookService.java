@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class BookService {
+
     private final BookRepository bookRepository;
 
     @Autowired
@@ -40,6 +41,17 @@ public class BookService {
             throw new RuntimeException("Error deleting book with id: " + id, e);
         }
     }
+
+    public BookDto updateBook(Long id, BookDto bookDto) {
+        if (!bookRepository.existsById(id)) {
+            throw new RuntimeException("Book not found with id: " + id);
+        }
+        bookDto.setId(id);
+        Book book = bookRepository.save(toEntity(bookDto));
+        return toDto(book);
+    }
+
+
 
     private BookDto toDto(Book book) {
         return new BookDto(book.getId(), book.getTitle(), book.getAuthor());
